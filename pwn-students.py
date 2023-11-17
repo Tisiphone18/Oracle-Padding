@@ -139,7 +139,7 @@ for byte_nr in range(1, 17):
         zwischen_block[3] = xor
     else:
         zwischen_block[3] = xor + zwischen_block[3]
-
+    print(paddings[byte_nr-1])
     x = paddings[byte_nr-1].to_bytes(byte_nr, byteorder='big')
     x = bytes(x ^ y for x, y in zip(xor, x))
 
