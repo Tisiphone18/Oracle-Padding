@@ -133,6 +133,8 @@ for byte_nr in range(1, 17):
     stelle = bytes([byte_nr & 0xFF])
     xor = bytes(x ^ y for x, y in zip(found, stelle)) # -> a0
 
+    print("Zwischenblock: ", zwischen_block)
+    print("xor: ", xor)
     if byte_nr == 1:
         zwischen_block[3] = xor
     else:
